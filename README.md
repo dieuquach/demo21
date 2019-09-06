@@ -16,3 +16,10 @@
 - Mỗi người làm xong task của mình thì đẩy lên github để lần sau làm, tránh trường hợp mất code.
 - Sau khi hoàn thành tất cả task trong nhánh của mình thì merge tới master. Tưc là chuyển nhánh đó làm về nhánh master
 8. Fix lỗi khi không thể clone đồ án về local: git config --global http.proxy "192.168.101.253:3128"
+9. Fix lỗi khi không thể push đồ án lên github:
+  Khi đang ở nhánh master:
+      - git pull --rebase
+      - git push
+  Khi đang ở nhánh dev
+        + git pull --rebase origin master
+        + git push origin master
